@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td for="Amount">Amount</td>
+                <td for="From Currency">From Currency</td>
+                <td for="To Currency">To Currency</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="Amount">
+                </td>
+                <td>
+                    <select id="From Currency">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="To Currency">
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="DOITIEN()">Convert</button>
+                </td>
+            </tr>
+            <tr>
+                <td id="result">
+                    result:
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function DOITIEN(){
+        let Amount=document.getElementById("Amount").value 
+        let From=document.getElementById("From Currency").value
+        let To=document.getElementById("To Currency").value
+        if (From==To)
+         {
+            document.getElementById("result").innerHTML=Amount + " VND "
+            
+        }
+        if (From=="USD"&&To=="VND")
+        {
+            document.getElementById("result").innerHTML=(Amount * 24000) + " VND "
+        }
+        if (From=="VND"&&To=="USD")
+        {
+            document.getElementById("result").innerHTML=(Amount / 24000) + " USD "
+        }
+    }
+    </script>
+</body>
+</html>
