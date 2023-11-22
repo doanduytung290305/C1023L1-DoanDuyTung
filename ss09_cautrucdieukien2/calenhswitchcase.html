@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="Tính số ngày">
+    <button onclick="Tinhsongay()">Tính số ngày</button>
+    <p id="result">result</p>
+    <script>
+        function Tinhsongay(){
+            let A = +document.getElementById("Tính số ngày").value
+        switch (A) {
+            case 1 :  document.getElementById("result").innerHTML="tháng 1 có 31 ngày"; break;
+            case 2 :  document.getElementById("result").innerHTML="tháng 2 có 28 ngày hoặc 29 ngày"; break;
+            case 3 :  document.getElementById("result").innerHTML="tháng 3 có 31 ngày"; break;
+            case 4 :  document.getElementById("result").innerHTML="tháng 4 có 30 ngày"; break;
+            case 5 :  document.getElementById("result").innerHTML="tháng 5 có 31 ngày"; break;
+            case 6 :  document.getElementById("result").innerHTML="tháng 6 có 30 ngày"; break;
+            case 7 :  document.getElementById("result").innerHTML="tháng 7 có 31 ngày"; break;
+            case 8 :  document.getElementById("result").innerHTML="tháng 8 có 31 ngày"; break;
+            case 9 :  document.getElementById("result").innerHTML="tháng 9 có 30 ngày"; break;
+            case 10 :  document.getElementById("result").innerHTML="tháng 10 có 31 ngày"; break;
+            case 11 :  document.getElementById("result").innerHTML="tháng 11 có 30 ngày"; break;
+            case 12 :  document.getElementById("result").innerHTML="tháng 12 có 31 ngày"; break;
+            default: document.getElementById("result").innerHTML="không có tháng này trong năm"; break;
+        }
+        }
+    </script>
+</body>
+</html>

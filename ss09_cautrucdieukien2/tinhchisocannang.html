@@ -2,29 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tính chỉ số cân nặng của cơ thể</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1><strong>Tính chỉ số cân nặng</strong></h1><br>
-Nhập cân nặng (Kg): <label><input id="weight" type="number" placeholder="Cân nặng"></label><br>
-Nhập chiều cao (m): <label><input id="height" type="number" placeholder="Chiều cao"></label><br>
-<button onclick="submit()">Kết quả</button>
-<p id="chiso"></p>
+    <h1>
+        Tính chỉ số cân nặng
+    </h1>
+    <label for="Weight">Nhập cân nặng:(kg)</label>
+    <input type="text" id="Weight">
+    <br>
+    <br>
+    <label for="Height">Nhập chiều cao:(m)</label>
+    <input type="text" id="Height">
+    <br>
+    <br>
+    <button onclick="CHECK()">check</button>
+    <p id="result">result</p>
+    <script>
+        function CHECK(){
+           let A = document.getElementById("Weight").value
+           let B = document.getElementById("Height").value
+           let BMI = A / (B ^ 2)
+           if (BMI<18.5)
+           document.getElementById("result").innerHTML="underweight"
+           if (BMI >=18.5 &&BMI<25.0)
+           document.getElementById("result").innerHTML="Normal"
+           if (BMI >=25 && BMI<30.0)
+           document.getElementById("result").innerHTML="Overweight"
+           else 
+           document.getElementById("result").innerHTML="Obese"
 
-<script>
-    function submit(){
-        let weight = +document.getElementById('weight').value;
-        let height = +document.getElementById('height').value;
-        let bmi;
-        bmi = weight / (height ^ 2);
-    console.log(`Chỉ số BMI là: ${bmi}`)
-    if (bmi<18.5){
-        document.getElementById('chiso').innerHTML="Underweight";
-    }else if (bmi<25.0){
-        document.getElementById('chiso').innerHTML="Normal";
-    }else if (bmi<30.0){
-        document.getElementById('chiso').innerHTML="Overweight";
-    }else document.getElementById('chiso').innerHTML="Obese";}
-</script>
+        }
+    </script>
 </body>
 </html>
