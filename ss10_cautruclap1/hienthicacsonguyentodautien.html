@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" onclick="soLuongSoNguyenTo()" value="So luong nguyen to">
+    <script>
+        function soLuongSoNguyenTo() {
+            let soLuongSNT = 0;
+            let number = 0;
+            while (true) {
+                if (soLuongSNT >= 20) {
+                    break;
+                }
+                if (number < 2) {
+                } else {
+                    if (number > 3) {
+                        let check = false;
+                        for (let i = 2; i < number; i++) {
+                            if (number % i === 0) {
+                                check = true;
+                                break;
+                            }
+                        }
+                        if (!check) {
+                           document.write("La so nguyen to", number)
+                            soLuongSNT++;
+                        }
+                    } else {
+                        document.write("La so nguyen to", number)
+                        soLuongSNT++;
+                    }
+                }
+                number++;
+            }
+        }
+
+    </script>
+</body>
+</html>
