@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Tuổi : </label>
+<input type="text" id="old">
+<button onclick="check()">check</button>
+<p id="result"></p>
+<script>
+  function check(){
+    let a = +document.getElementById("old").value
+    if(a >0 && a<120 ){
+      document.getElementById("result").innerHTML = "la tuoi cua con nguoi"
+    }
+    else
+    {
+      document.getElementById("result").innerHTML = "khong phai tuoi cua con nguoi"
+    }
+  }
+
+</script>
+</body>
+</html>

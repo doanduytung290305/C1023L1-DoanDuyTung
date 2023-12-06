@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>PT bậc 2 : ax^2 + bx + c = 0</h1>
+<label for ="a" > nhap a : </label>
+<input type="text" id ="a">
+<br>
+<label for ="b"> nhap b : </label>
+<input type="text" id ="b">
+<br>
+<label for ="c" > nhap c : </label>
+<input type="text" id ="c">
+<br>
+<button type="button" onclick="S()">Tìm x</button>
+<br>
+<p id="result"></p>
+<script>
+  function S()
+  {
+    let a = +document.getElementById("a").value
+    let b = +document.getElementById("b").value
+    let c = +document.getElementById("c").value
+    let d = Math.pow(b,2) - 4*a*c
+    if( d === 0 ){
+      document.getElementById("result").innerHTML = "pt 1 nghiem x = " + (-b/2*a)
+    }
+    else if(d < 0)
+    {
+      document.getElementById("result").innerHTML = "vo nghiem"
+    }
+    else
+    {
+      document.getElementById("result").innerHTML = "X1 = " + ((-b + Math.sqrt(d)) / 2*a) + " " + "X2 = " + ((-b - Math.sqrt(d) )/ 2*a)
+    }
+  }
+</script>
+</body>
+</html>

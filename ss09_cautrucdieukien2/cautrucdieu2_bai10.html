@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<caption>1 số trên đồng hồ điện là 3.5 k </caption>
+<br>
+<caption>nếu số == 0 khi nhà đang dùng điện thì báo hư dụng cụ đo</caption>
+<br>
+<caption>nếu số vượt quá 2000 số cho một hộ dân nhỏ thì báo giá và đề nghị xem xét</caption>
+<br>
+<label for="so">nhap so : </label>
+<input id="so" type="text">
+<button onclick="Tinh()">Tính</button>
+<p id ="result"></p>
+<script>
+  function Tinh() {
+    let so = +document.getElementById("so").value
+    if (so > 0) {
+      if (so === 0) {
+        document.getElementById("result").innerHTML = "tien dien = " + so + "VND co the dong ho dien hu"
+      } else if (so > 2000) {
+        document.getElementById("result").innerHTML = "tien dien = " + (so*3.5) + "VND co the dong ho dien hu"
+      }
+      else
+      {
+        document.getElementById("result").innerHTML = "tien dien = " + (so*3.5) + " VND"
+      }
+    } else {
+      document.getElementById("result").innerHTML = "co the dong ho dien hu"
+    }
+  }
+</script>
+</body>
+
+</html>

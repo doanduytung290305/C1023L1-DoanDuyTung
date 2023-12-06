@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="a">nhap canh a : </label>
+<input type="text" id ="a">
+<br>
+<label for ="b">nhap canh b : </label>
+<input type="text" id ="b">
+<br>
+<button onclick="S()">Tính Diện Tích</button>
+<br>
+<p id="result"></p>
+<script>
+    function S()
+    {
+        let a = +document.getElementById('a').value
+        let b = +document.getElementById('b').value
+        if(a<=0 || b<=0){
+            document.getElementById("result").innerHTML = "2 cạnh nhập chưa đạt điều kiện là một hình chữ nhật"
+        }
+        else{
+            document.getElementById("result").innerHTML = "Diên tích hình chữ nhật = " + (a+b)
+        }
+    }
+</script>
+</body>
+</html>

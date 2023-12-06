@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Nhap tu tieng anh : </label>   
+        <input id="English" type="text"> 
+        <button onclick="Dich()" type="button">Dich</button>
+        <p id="result">result</p>
+    </form>
+    <script>
+        function Dich() {
+            let Eng = ["Hello", "Hi", "Good", "Bad"]
+            let TV = ["Xin Chao", "Chao", "tot", "xu"]
+            let rs
+            let str = document.getElementById("English").value 
+            let index = -1;
+            for (let i = 0; i < Eng.length; i++) {
+                if (str === Eng[i]) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index !== -1) {
+                document.getElementById("result").innerHTML = TV[index];
+            } else {
+                document.getElementById("result").innerHTML = "Khong tim thay"
+            }
+        }
+    </script>
+    
+</body>
+</html>

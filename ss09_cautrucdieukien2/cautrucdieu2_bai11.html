@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<caption>nếu lương dưới 10 triệu và dưới 100 triệu thì nộp thuế 0 %</caption>
+<br>
+<caption>nếu lương trên 10 triệu và dưới 100 triệu thì nộp thuế 5 %</caption>
+<br>
+<caption>nếu lương trên 100 triệu thì nộp thuế 15 %</caption>
+<label for="salary">tien lương : </label>
+<input id="salary" type="text">
+<button onclick="check()">check</button>
+<p id ="kq" ></p>
+<script>
+  function check(){
+    let l = +document.getElementById("salary").value
+    if(l>0){
+      if(l < 10000000){
+        document.getElementById("kq").innerHTML="Thuế = 0 "
+      }
+      else if(l >= 10000000 && l<= 100000000){
+        document.getElementById("kq").innerHTML="Thuế = " + (l *0.5)
+      }
+      else{
+        document.getElementById("kq").innerHTML="Thuế = " + (l *1.5)
+      }
+      }
+    else{
+      document.getElementById("kq").innerHTML="Thất nghiệp"
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<caption>mỗi tháng tiền lãi sẽ cộng vào tiền cho vay </caption>
+<label for="vay"> so tien vay : </label>
+<input id="vay" type ="text">
+<br>
+<label for="thang">Tháng cho vay : </label>
+<input id="thang" type ="text">
+<br>
+<label for="lai">lai hang tháng : </label>
+<input id="lai" type ="text">
+<button onclick="tinh()">tinh lai</button>
+<p id="kq">result</p>
+<script>
+    function tinh(){
+        let thang = +document.getElementById("thang").value
+        let tien = +document.getElementById("vay").value
+        let lai = +document.getElementById("lai").value
+        let tienlai=0;
+        while(thang>=1)
+        {
+            tienlai= tienlai + (tien*lai);
+            tien = (tien*lai) + tien;
+            thang = thang-1;
+        }
+        document.getElementById("kq").innerHTML ="lai = " +  tienlai;
+    }
+</script>
+</body>
+</html>

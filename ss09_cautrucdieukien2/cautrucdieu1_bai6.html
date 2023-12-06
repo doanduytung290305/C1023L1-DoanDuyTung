@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>nếu số tiền lớn hơn 1 triệu VND và dưới 2 triệu thì nhận 10% tiền hoa hồng</h3>
+<br>
+<h3>nếu số tiền lớn hơn 2 triệu VND thì nhận 15% tiền hoa hồng</h3>
+<br>
+<h3>nếu số tiền bé hơn 1 triệu thì tiền hoa hồng bằng 0</h3>
+<br>
+
+<label for="money">Tien : </label>
+<input id="money" type="text">
+<br>
+<button type="button" onclick="check()">check</button>
+<p id="result"></p>
+<script>
+  function check() {
+    let a = +document.getElementById("money").value
+    let tip=0;
+    if (a >= 2000000) {
+      tip = a * (15 / 100);
+      document.getElementById("result").innerHTML = "Tiền hoa hồng = " + tip;
+    } else if (a>=1000000 && a < 2000000) {
+      tip = a * (10 / 100);
+      document.getElementById("result").innerHTML = "Tiền hoa hồng = " + tip;
+    } else {
+      document.getElementById("result").innerHTML = "Tiền hoa hồng = 0";
+    }
+  }
+</script>
+</body>
+</html>

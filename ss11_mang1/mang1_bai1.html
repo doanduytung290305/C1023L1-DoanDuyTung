@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+        let a = [11,9,8,15,10,10];
+        let dembe=0;
+        let demlon=0;
+        let dembang=0;
+        for (let i = 0;i < a.length;i++ ){
+            if (a[i] < 10) { 
+               dembe++; 
+            }
+            if (a[i] > 10) {
+                demlon++; 
+            }
+            if (a[i] === 10) {
+                dembang++; 
+            }
+
+        }
+        document.write("so be hon 10 " + dembe + "," + "so lon hon 10 " + demlon + "." + "so bang 10 " + dembang)
+    </script>
+</body>
+</html>

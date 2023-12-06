@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>PT bậc 1 : ax + b = 0 </h1>
+<label for ="a" > nhap a : </label>
+<input type="text" id ="a">
+<br>
+<label for ="b"> nhap b : </label>
+<input type="text" id ="b">
+<br>
+<button type="button" onclick="S()">Tìm x</button>
+<br>
+<p id="result"></p>
+<script>
+    function S()
+    {
+        let a = +document.getElementById("a").value
+        let b = +document.getElementById("b").value
+        if(a===0 && b===0 ){
+            document.getElementById("result").innerHTML = "vo so nghiem"
+        }
+        else if(a===0 && b!==0)
+        {
+            document.getElementById("result").innerHTML = "vo nghiem"
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "X = " + (-b/a)
+        }
+
+    }
+</script>
+</body>
+</html>
